@@ -8,6 +8,7 @@
                 <router-link to="/"><li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800">Home</li></router-link>
                 <router-link to="/about"><li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800">About</li></router-link>
                 <router-link to="/login"><li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800">Login</li></router-link>
+                <router-link :to="{name: 'Secret'}"><li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800">Secret</li></router-link>
             </ul>
         </nav>
     </div>
