@@ -14,8 +14,11 @@ const {isAuthenticated, logout} = useAuth();
                 <router-link to="/"><li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800">Home</li></router-link>
                 <router-link to="/about"><li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800">About</li></router-link>
                 <router-link v-if="!isAuthenticated" to="/login"><li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800">Login</li></router-link>
-                 <router-link v-else :to="{name: 'Secret'}"><li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800">Secret</li></router-link>
-                <button v-else @click="logout"><li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800">Logout</li></button>
+                <div v-else class="flex">
+                 <router-link  :to="{name: 'Secret'}"><li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800">Secret</li></router-link>
+                <button  @click="logout"><li class="py-8 px-4 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800">Logout</li>
+                </button>
+                </div>
             </ul>
         </nav>
     </div>
